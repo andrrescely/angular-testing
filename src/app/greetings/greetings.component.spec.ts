@@ -16,17 +16,22 @@ describe('GreetingsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('El componente se creo correctamente', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should have default message value', () => {
-    fixture.detectChanges();
-
+  it('El mensaje esperado es el correcto', () => {
     const mensajeElement = fixture.debugElement.query(
       By.css('.mensaje')
     ).nativeElement;
-
-    expect(mensajeElement.textContent).toContain('Valor por defecto');
+    expect(mensajeElement.textContent).toContain(component.mensaje);
   });
+
+  it('aqui se ve algo ', () => {
+    const mensajeElement = fixture.debugElement.query(
+      By.css('.mensaje')
+    ).nativeElement;
+    expect(mensajeElement.textContent).toContain(component.mensaje); 
+  });
+
 });
